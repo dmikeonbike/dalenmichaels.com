@@ -28,7 +28,7 @@ The site is about what Dalen does for the reader, not about surfing. Themes: get
 
 - lowercase. short sentences. things Dalen would literally say. no "we are pleased", no corporate phrasing, no em-dashes.
 - first person. specific numbers over adjectives. one idea per paragraph.
-- headlines in Instrument Serif with the italic accent word (`<i>word</i>`) carrying the teal.
+- headlines in Inter Tight, tight tracking, lowercase except the name. black and warm off-white only, no accent colors.
 - faith, family (mom Alena, dog Dude), surfing, Out The Back, Destination X S2 are the recurring threads. Don't invent facts; if a fact isn't in site.json, the pages, or a post, ask Dalen.
 
 ## Blog agent workflow
