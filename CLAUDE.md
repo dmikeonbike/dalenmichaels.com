@@ -20,6 +20,10 @@ Commit the `docs/` output too: GitHub Pages serves it directly, there is no CI b
 - `content/posts/YYYY-MM-DD-slug.md` — blog posts. Front matter: `title, date, description, tags, slug, cover (optional), draft: true (to hide)`.
 - `docs/assets/` — css, img (web-sized, ≤1600px, q82), the two PDFs.
 
+## Positioning (Oct 9 2026)
+
+The site is about what Dalen does for the reader, not about surfing. Themes: get out of your comfort zone, stop caring what people think, rebuild yourself (75 days, jiu jitsu, he's a fighter), build the room you want to be in (surf club, community), start ugly (empty van → surf expo), say yes to the scary thing (35 countries → Destination X). Surfing is texture, not the subject.
+
 ## Voice (non-negotiable)
 
 - lowercase. short sentences. things Dalen would literally say. no "we are pleased", no corporate phrasing, no em-dashes.
