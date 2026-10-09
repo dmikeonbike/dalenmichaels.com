@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{{full_title}}</title>
 <meta name="description" content="{{description}}">
 <link rel="canonical" href="{{canonical}}">
+<meta name="theme-color" content="#0E1B24">
 <meta property="og:type" content="{{og_type}}">
 <meta property="og:title" content="{{full_title}}">
 <meta property="og:description" content="{{description}}">
@@ -20,32 +21,25 @@
 <link rel="alternate" type="application/rss+xml" title="{{name}} blog" href="/feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:ital,wght@0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css">
 {{#jsonld}}<script type="application/ld+json">{{jsonld}}</script>{{/jsonld}}
 {{#clarity_id}}<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","{{clarity_id}}");</script>{{/clarity_id}}
 </head>
 <body class="{{page_class}}">
-<header class="top">
-  <div class="topbar mono">
-    <span>{{domain}}</span>
-    <span class="hide-sm">@dalenmichaels · @dalenboi</span>
-    <span>{{location}} · {{latitude}}</span>
+<nav class="nav">
+  <a class="brand" href="/">dalen <span>michaels</span></a>
+  <button class="nav-toggle" aria-label="menu" onclick="document.body.classList.toggle('nav-open')">menu</button>
+  <div class="links">
+    <a href="/about/" data-nav="about">story</a>
+    <a href="/brands/" data-nav="brands">brands</a>
+    <a href="/mentorship/" data-nav="mentorship">mentorship</a>
+    <a href="/speaking/" data-nav="speaking">speaking</a>
+    <a href="/codes/" data-nav="codes">codes</a>
+    <a href="/blog/" data-nav="blog">blog</a>
+    <a class="nav-cta" href="mailto:{{email}}?subject=let's%20work%20together">contact</a>
   </div>
-  <nav class="nav">
-    <a class="brand serif" href="/">dalen <i>michaels</i></a>
-    <button class="nav-toggle" aria-label="menu" onclick="document.body.classList.toggle('nav-open')">menu</button>
-    <div class="links mono">
-      <a href="/about/" data-nav="about">about</a>
-      <a href="/brands/" data-nav="brands">brands</a>
-      <a href="/mentorship/" data-nav="mentorship">mentorship</a>
-      <a href="/speaking/" data-nav="speaking">speaking</a>
-      <a href="/codes/" data-nav="codes">codes</a>
-      <a href="/blog/" data-nav="blog">blog</a>
-      <a class="nav-cta" href="mailto:{{email}}?subject=let's%20work%20together">contact</a>
-    </div>
-  </nav>
-</header>
+</nav>
 
 <main>
 {{body}}
@@ -54,31 +48,32 @@
 <footer class="foot">
   <div class="foot-grid">
     <div>
-      <p class="serif foot-name">dalen <i>michaels</i></p>
-      <p class="muted">surf creator · founder, <a href="{{brand_url}}" target="_blank" rel="noopener">out the back</a> · cast, destination x s2</p>
-      <p class="mono"><a href="mailto:{{email}}">{{email}}</a></p>
+      <p class="foot-name">dalen <span>michaels</span></p>
+      <p class="muted">lifestyle surf creator · founder, <a href="{{brand_url}}" target="_blank" rel="noopener">out the back</a> · cast, destination x s2</p>
+      <p><a href="mailto:{{email}}">{{email}}</a></p>
     </div>
-    <div class="mono foot-links">
+    <div class="foot-links">
       <a href="{{instagram}}" target="_blank" rel="noopener">instagram</a>
       <a href="{{tiktok}}" target="_blank" rel="noopener">tiktok</a>
       <a href="{{youtube}}" target="_blank" rel="noopener">youtube</a>
       <a href="{{linkedin}}" target="_blank" rel="noopener">linkedin</a>
       <a href="{{brand_url}}" target="_blank" rel="noopener">outheback.com</a>
     </div>
-    <div class="mono foot-links">
+    <div class="foot-links">
       <a href="/brands/">brand deals</a>
       <a href="/mentorship/">mentorship</a>
       <a href="/speaking/">speaking</a>
       <a href="/codes/">codes</a>
       <a href="/blog/">blog</a>
-      <a href="/feed.xml">rss</a>
     </div>
   </div>
-  <p class="mono foot-stamp">{{domain}} · {{location}} · updated {{updated}} · glory to god</p>
+  <p class="foot-stamp"><span>{{domain}} · boca raton, florida</span><span class="gold">glory to god</span></p>
 </footer>
 <script>
   document.querySelectorAll('[data-nav="{{nav}}"]').forEach(a=>a.classList.add('active'));
   document.querySelectorAll('.yt').forEach(el=>{el.addEventListener('click',()=>{const id=el.dataset.id;el.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0" title="intro video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';el.classList.add('playing');});});
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.2});
+  document.querySelectorAll('.reveal,.chapter').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>

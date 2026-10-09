@@ -2,11 +2,9 @@
   "name": "Dalen Michaels",
   "domain": "dalenmichaels.com",
   "base_url": "https://dalenmichaels.com",
-  "tagline": "too busy surfing.",
-  "description": "Dalen Michaels is a surf creator, founder of Out The Back, and cast member of Destination X season 2 (NBC / Peacock). Brand partnerships, mentorship, and speaking out of Boca Raton, Florida.",
+  "description": "Dalen Michaels is a lifestyle surf creator, founder of Out The Back, and cast member of Destination X season 2 (NBC / Peacock). Brand partnerships, mentorship, and speaking out of Boca Raton, Florida.",
   "email": "management.dalen@gmail.com",
-  "location": "boca raton, fl",
-  "latitude": "26.37° n",
+  "location": "boca raton, florida",
   "instagram": "https://www.instagram.com/dalenmichaels/",
   "tiktok": "https://www.tiktok.com/@dalenboi",
   "youtube": "https://www.youtube.com/@dalenmichaels",
@@ -14,6 +12,6 @@
   "brand_url": "https://outheback.com/",
   "intro_video_id": "",
   "clarity_id": "",
-  "stats_asof": "october 2026",
+  "form_endpoint": "",
   "updated": "2026-10-09"
 }

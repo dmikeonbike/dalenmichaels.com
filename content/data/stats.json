@@ -1,0 +1,14 @@
+{
+  "_comment": "Live-analytics feed. scripts/update_stats.py refreshes this from the Instagram Graph API when IG_TOKEN is set; otherwise edit by hand. Values are strings so they render exactly as written.",
+  "asof": "october 2026",
+  "source": "instagram insights + tiktok",
+  "views_30d": "10.0M",
+  "reach_30d": "3.75M",
+  "followers_total": "173K",
+  "interactions_30d": "787K",
+  "ig_followers": "66.5K",
+  "tt_followers": "107K",
+  "tt_likes": "3.9M",
+  "engaged_30d": "548K",
+  "profile_visits_30d": "49K"
+}
