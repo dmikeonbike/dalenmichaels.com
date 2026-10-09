@@ -6,7 +6,7 @@
 <title>codes & brands i use · Dalen Michaels</title>
 <meta name="description" content="Discount codes and links for the brands Dalen Michaels actually uses. One page, no digging through captions.">
 <link rel="canonical" href="https://dalenmichaels.com/codes/">
-<meta name="theme-color" content="#0E1B24">
+<meta name="theme-color" content="#0A0A0A">
 <meta property="og:type" content="website">
 <meta property="og:title" content="codes & brands i use · Dalen Michaels">
 <meta property="og:description" content="Discount codes and links for the brands Dalen Michaels actually uses. One page, no digging through captions.">
@@ -21,14 +21,14 @@
 <link rel="alternate" type="application/rss+xml" title="Dalen Michaels blog" href="/feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:ital,wght@0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/site.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css?v=2026-10-09c">
 
 
 </head>
 <body class="page-codes">
 <nav class="nav">
-  <a class="brand" href="/">dalen <span>michaels</span></a>
+  <a class="brand" href="/">dalen michaels</a>
   <button class="nav-toggle" aria-label="menu" onclick="document.body.classList.toggle('nav-open')">menu</button>
   <div class="links">
     <a href="/about/" data-nav="about">story</a>
@@ -42,12 +42,11 @@
 </nav>
 
 <main>
-<section class="section" style="padding-bottom:24px">
+<section class="page-head">
   <span class="kicker">for the fans</span>
-  <h1 style="font-size:clamp(3.2rem,11vw,8rem)">codes &amp; brands i use</h1>
+  <h1>codes &amp; brands i use</h1>
   <p class="lede">everything i get asked about in the comments, in one place. if there's a code, it's here. if it's just a link, i still use it. only brands that are actually in my day make this page.</p>
 </section>
-
 <section class="section" style="padding-top:0">
   <div class="code-list">
 
@@ -58,15 +57,14 @@
         <span class="code-deal">shop the drop</span>
       </a>
   </div>
-  <p class="muted" style="margin-top:24px;font-size:.85rem">some links are affiliate links, which means i may earn a commission at no extra cost to you. it helps keep the lights on at the warehouse.</p>
+  <p class="mute" style="margin-top:24px;font-size:.85rem">some links are affiliate links, which means i may earn a commission at no extra cost to you. it helps keep the lights on at the warehouse.</p>
 </section>
-
 <section class="section dark">
   <div class="section-head">
     <div><span class="kicker">brands</span><h2>want your code on this page?</h2></div>
     <p>this page gets the traffic from every "what's the code" comment i answer. partners get a permanent spot here plus the content.</p>
   </div>
-  <a class="btn btn-gold" href="/brands/">work with me</a>
+  <a class="btn" href="/brands/">work with me</a>
 </section>
 
 </main>
@@ -74,8 +72,8 @@
 <footer class="foot">
   <div class="foot-grid">
     <div>
-      <p class="foot-name">dalen <span>michaels</span></p>
-      <p class="muted">lifestyle surf creator · founder, <a href="https://outheback.com/" target="_blank" rel="noopener">out the back</a> · cast, destination x s2</p>
+      <p class="foot-name">dalen michaels</p>
+      <p class="mute">lifestyle surf creator · founder, <a href="https://outheback.com/" target="_blank" rel="noopener">out the back</a> · cast, destination x s2</p>
       <p><a href="mailto:management.dalen@gmail.com">management.dalen@gmail.com</a></p>
     </div>
     <div class="foot-links">
@@ -93,12 +91,13 @@
       <a href="/blog/">blog</a>
     </div>
   </div>
-  <p class="foot-stamp"><span>dalenmichaels.com · boca raton, florida</span><span class="gold">glory to god</span></p>
+  <p class="foot-stamp"><span>dalenmichaels.com · boca raton, florida</span><span>glory to god</span></p>
 </footer>
 <script>
   document.querySelectorAll('[data-nav="codes"]').forEach(a=>a.classList.add('active'));
   document.querySelectorAll('.yt').forEach(el=>{el.addEventListener('click',()=>{const id=el.dataset.id;el.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0" title="intro video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';el.classList.add('playing');});});
-  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.2});
+  const nav=document.querySelector('.nav');let ly=0;function onS(){const y=scrollY;nav.classList.toggle('scrolled',y>60);nav.classList.toggle('hidden',y>300&&y>ly&&!document.body.classList.contains('nav-open'));ly=y;}addEventListener('scroll',onS,{passive:true});onS();
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.15});
   document.querySelectorAll('.reveal,.chapter').forEach(el=>io.observe(el));
 </script>
 </body>
