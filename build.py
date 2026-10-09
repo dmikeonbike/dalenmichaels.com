@@ -151,7 +151,23 @@ def post_card(p):
       </a>"""
 
 
+IMG_RE = re.compile(r'<img src="(/assets/img/([\w-]+)\.jpg)"([^>]*)>')
+
+def responsive(html_text):
+    """Add srcset for images that have a -m.jpg variant; full-bleed photos load eagerly."""
+    def sub(m):
+        src, name, rest = m.group(1), m.group(2), m.group(3)
+        if (OUT / "assets/img" / f"{name}-m.jpg").exists() and "srcset" not in rest:
+            rest = f' srcset="/assets/img/{name}-m.jpg 1000w, {src} 2000w" sizes="100vw"' + rest
+        return f'<img src="{src}"{rest}>'
+    out = IMG_RE.sub(sub, html_text)
+    out = re.sub(r'(<div class="media">|<figure>)(<img [^>]*?) loading="lazy"', r'\1\2 decoding="async"', out)
+    return out
+
+
 def write(path, content):
+    if path.endswith(".html"):
+        content = responsive(content)
     path = OUT / path
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(content)
