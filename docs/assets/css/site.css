@@ -350,3 +350,35 @@ body.page-codes .nav,body.page-blog .nav,body.page-post .nav,body.page-404 .nav{
 @media(min-width:720px){.since{grid-template-columns:280px 1fr;gap:40px}}
 .since img{border-radius:14px;aspect-ratio:3/2;object-fit:cover;width:100%}
 .since h3{font-size:clamp(1.6rem,3vw,2.4rem);margin-bottom:8px}
+
+/* ===== desktop: split layouts so portrait photos aren't blown up ===== */
+@media(min-width:900px){
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;align-items:stretch;min-height:100svh;background:var(--black)}
+  .hero-bg{position:relative;grid-column:2;grid-row:1;overflow:hidden}
+  .hero-bg img{object-position:var(--pos,center 20%);transform:scale(1.03)}
+  .hero-bg::after{background:linear-gradient(90deg, rgba(10,10,10,.55) 0%, rgba(10,10,10,0) 30%),linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,.35) 100%)}
+  .hero-inner{grid-column:1;grid-row:1;display:flex;flex-direction:column;justify-content:flex-end;padding:120px var(--gutter) clamp(36px,5vw,64px);max-width:none}
+  .hero h1{font-size:clamp(5rem,9.5vw,11rem)}
+  .hero .line{max-width:34em}
+  .hero-foot{flex-direction:column;align-items:flex-start;gap:26px}
+
+  .chapter{display:grid;grid-template-columns:1fr 1fr;min-height:92svh;align-items:end}
+  .chapter .media{position:relative;grid-column:2;grid-row:1;overflow:hidden;min-height:92svh}
+  .chapter:nth-of-type(even) .media{grid-column:1}
+  .chapter:nth-of-type(even) .text{grid-column:2}
+  .chapter .text{grid-column:1;grid-row:1;padding:clamp(56px,8vw,120px) var(--gutter);max-width:none;align-self:center}
+  .chapter .media::after{background:linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,.35) 100%)}
+  .chapter h2{font-size:clamp(2.6rem,4.6vw,5rem);max-width:11em}
+  .chapter p{max-width:28em}
+  .chapter.fit .media{background:var(--black-2)}
+  .chapter.text-only{display:block}
+  .chapter.text-only .text{padding:clamp(72px,10vw,140px) var(--gutter);max-width:var(--max)}
+
+  /* secondary page heroes keep full-bleed but pin the photo so faces sit right */
+  .page-brands .hero,.page-mentorship .hero,.page-speaking .hero,.page-about .hero{display:grid;grid-template-columns:1fr}
+  .page-brands .hero-bg,.page-mentorship .hero-bg,.page-speaking .hero-bg,.page-about .hero-bg{position:absolute;grid-column:auto;grid-row:auto}
+  .page-brands .hero-bg::after,.page-mentorship .hero-bg::after,.page-speaking .hero-bg::after,.page-about .hero-bg::after{background:linear-gradient(180deg, rgba(0,0,0,.25) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 50%, rgba(0,0,0,.78) 100%)}
+  .page-brands .hero-inner,.page-mentorship .hero-inner,.page-speaking .hero-inner,.page-about .hero-inner{grid-column:auto;grid-row:auto;display:block;max-width:var(--max);padding:0 var(--gutter) clamp(28px,5vw,56px)}
+  .page-brands .hero-foot,.page-mentorship .hero-foot,.page-speaking .hero-foot,.page-about .hero-foot{flex-direction:row}
+  .page-mentorship .chapter{display:grid}
+}
