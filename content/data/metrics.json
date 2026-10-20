@@ -1,4 +1,137 @@
 {
-  "table": [],
-  "top": []
+  "asof": "october 19, 2026",
+  "window": "122 reels \u00b7 Apr 22 to Oct 14, 2026",
+  "followers": 69000,
+  "source": "meta business suite export, lifetime post data",
+  "table": [
+    {
+      "metric": "total views",
+      "formula": "sum across 122 reels",
+      "value": "14.1M"
+    },
+    {
+      "metric": "average views per reel",
+      "formula": "total views \u00f7 reels",
+      "value": "115.2K"
+    },
+    {
+      "metric": "median views per reel",
+      "formula": "the middle reel",
+      "value": "14.1K"
+    },
+    {
+      "metric": "views-to-follower ratio",
+      "formula": "avg views \u00f7 followers",
+      "value": "1.7x"
+    },
+    {
+      "metric": "engagement rate (by followers)",
+      "formula": "(likes + comments + saves + shares) \u00f7 followers, avg per reel",
+      "value": "8.4%"
+    },
+    {
+      "metric": "engagement rate (by views)",
+      "formula": "engagements \u00f7 views",
+      "value": "5.01%"
+    },
+    {
+      "metric": "like rate",
+      "formula": "likes \u00f7 views",
+      "value": "4.18%"
+    },
+    {
+      "metric": "save rate",
+      "formula": "saves \u00f7 views",
+      "value": "0.32%"
+    },
+    {
+      "metric": "share rate",
+      "formula": "shares \u00f7 views",
+      "value": "0.48%"
+    },
+    {
+      "metric": "comment rate",
+      "formula": "comments \u00f7 views",
+      "value": "0.028%"
+    },
+    {
+      "metric": "new followers from reels",
+      "formula": "follows attributed to posts",
+      "value": "9.4K"
+    },
+    {
+      "metric": "hit rate",
+      "formula": "reels over 100K \u00f7 reels",
+      "value": "15 of 122 (12%)"
+    },
+    {
+      "metric": "reels over 1M",
+      "formula": "count",
+      "value": "3"
+    },
+    {
+      "metric": "posting cadence",
+      "formula": "reels \u00f7 days",
+      "value": "122 in 175 days, one every 1.4"
+    },
+    {
+      "metric": "cpm on a $1,500 reel",
+      "formula": "rate \u00f7 avg views \u00d7 1,000",
+      "value": "$13.02"
+    },
+    {
+      "metric": "cost per engagement",
+      "formula": "rate \u00f7 avg engagements per reel",
+      "value": "$0.26"
+    }
+  ],
+  "top": [
+    {
+      "views": "5.9M",
+      "permalink": "https://www.instagram.com/reel/DdNGFD3pv4g/",
+      "caption": "Finding out who true friends are \ud83d\ude33\ud83d\udc80",
+      "date": "2026-09-12"
+    },
+    {
+      "views": "1.6M",
+      "permalink": "https://www.instagram.com/reel/DbTHODeOjQV/",
+      "caption": "most dramatic goodbye @alenamichaels ",
+      "date": "2026-07-27"
+    },
+    {
+      "views": "1.5M",
+      "permalink": "https://www.instagram.com/reel/Deflf2OpPTC/",
+      "caption": "Ending veganism one steak at a time \ud83e\udd69",
+      "date": "2026-10-14"
+    },
+    {
+      "views": "643K",
+      "permalink": "https://www.instagram.com/reel/DeR0SS0OEdw/",
+      "caption": "Same goes for the guys! Comment your red flags for us to review\ud83d\udea9\ud83d\udea9\ud83d\udea9",
+      "date": "2026-10-09"
+    },
+    {
+      "views": "517.7K",
+      "permalink": "https://www.instagram.com/reel/DZYIyvoJAP7/",
+      "caption": "I can\u2019t believe he said that \ud83d\ude33",
+      "date": "2026-06-09"
+    },
+    {
+      "views": "438.2K",
+      "permalink": "https://www.instagram.com/reel/DYMvzigOHP8/",
+      "caption": "follow for more white belt techniques \ud83d\udd25",
+      "date": "2026-05-11"
+    }
+  ],
+  "totals": {
+    "reels": 122,
+    "views": 14056902.0,
+    "reach": 9587021.0,
+    "engagements": 704697.0,
+    "likes": 587795.0,
+    "comments": 3927.0,
+    "saves": 45463.0,
+    "shares": 67512.0,
+    "follows": 9435.0
+  }
 }

@@ -141,8 +141,9 @@ def main():
 
     reels = [r for r in rows if r["type"] == "REELS" and r["views"]]
     reels.sort(key=lambda r: r["date"], reverse=True)
-    last90 = [r for r in reels if r["date"] >= (datetime.date.today() - datetime.timedelta(days=90)).isoformat()]
-    base = last90 if len(last90) >= 10 else reels[:30]
+    WINDOW_DAYS = 180
+    recent = [r for r in reels if r["date"] >= (datetime.date.today() - datetime.timedelta(days=WINDOW_DAYS)).isoformat()]
+    base = recent if len(recent) >= 10 else reels[:30]
     views = [r["views"] for r in base]
     eng = [r["likes"] + r["comments"] + r["saves"] + r["shares"] for r in base]
     days = max(1, (datetime.date.fromisoformat(base[0]["date"]) - datetime.date.fromisoformat(base[-1]["date"])).days) if base else 1
