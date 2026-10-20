@@ -118,6 +118,16 @@ def partial_codes(items):
     return "\n".join(rows)
 
 
+def partial_metrics(m):
+    if not m.get("table"):
+        return '<p class="mute">the full account breakdown goes live as soon as the instagram feed is connected.</p>'
+    rows = "".join(f'<tr><td>{html.escape(r["metric"])}</td><td class="mute">{html.escape(r["formula"])}</td><td class="num">{html.escape(str(r["value"]))}</td></tr>' for r in m["table"])
+    top = "".join(f'<a class="toprow" href="{html.escape(t["permalink"] or "#")}" target="_blank" rel="noopener"><b>{html.escape(t["views"])}</b><span>{html.escape(t["caption"] or t["date"])}</span></a>' for t in m.get("top", [])[:6])
+    return f"""<p class="mute" style="margin-bottom:18px">whole account, pulled from instagram insights. window: {html.escape(m.get("window",""))}. refreshed {html.escape(m.get("asof",""))}.</p>
+    <table class="metrics"><tbody>{rows}</tbody></table>
+    <div class="topgrid"><span class="kicker" style="grid-column:1/-1;margin-top:36px">top reels, all time</span>{top}</div>"""
+
+
 def partial_brands(items):
     return " <span class='dot'>·</span> ".join(html.escape(b) for b in items)
 

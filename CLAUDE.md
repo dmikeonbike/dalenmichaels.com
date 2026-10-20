@@ -40,6 +40,10 @@ The site is about what Dalen does for the reader, not about surfing. Themes: get
 
 Backlog: building the OTB van · the warehouse build · how I price brand deals · jiu jitsu and business · my morning routine (the LMNT reel) · florida surf spots guide · what mom-and-son content taught me · van tour 2026 recap · surf expo as a small brand.
 
+## Live Instagram metrics
+
+`scripts/ig_metrics.py` pulls the whole account via the Instagram Graph API (token in `~/.config/dalenmichaels/ig.env`, never in the repo), filters out trial reels (`is_shared_to_feed` false) and anything listed in `content/data/exclude_media.json` (media ids or permalink fragments), then writes `content/data/stats.json` + `content/data/metrics.json`. Run it, then `python3 build.py`, commit, push. A scheduled task does this on the 1st of each month.
+
 ## Deploy
 
 GitHub Pages, branch `main`, folder `/docs`, custom domain `dalenmichaels.com` (CNAME file is generated). DNS at the registrar: A records 185.199.108.153 / .109 / .110 / .111 and CNAME `www` → `<user>.github.io`.
