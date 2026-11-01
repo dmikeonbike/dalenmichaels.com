@@ -1,68 +1,68 @@
 {
-  "asof": "october 19, 2026",
-  "window": "122 reels \u00b7 Apr 22 to Oct 14, 2026",
-  "followers": 69000,
+  "asof": "november 1, 2026",
+  "window": "114 reels \u00b7 May 5 to Oct 31, 2026",
+  "followers": 71000,
   "source": "meta business suite export, lifetime post data",
   "table": [
     {
       "metric": "total views",
-      "formula": "sum across 122 reels",
-      "value": "14.1M"
+      "formula": "sum across 114 reels",
+      "value": "17.1M"
     },
     {
       "metric": "average views per reel",
       "formula": "total views \u00f7 reels",
-      "value": "115.2K"
+      "value": "149.7K"
     },
     {
       "metric": "median views per reel",
       "formula": "the middle reel",
-      "value": "14.1K"
+      "value": "17K"
     },
     {
       "metric": "views-to-follower ratio",
       "formula": "avg views \u00f7 followers",
-      "value": "1.7x"
+      "value": "2.1x"
     },
     {
       "metric": "engagement rate (by followers)",
       "formula": "(likes + comments + saves + shares) \u00f7 followers, avg per reel",
-      "value": "8.4%"
+      "value": "10.8%"
     },
     {
       "metric": "engagement rate (by views)",
       "formula": "engagements \u00f7 views",
-      "value": "5.01%"
+      "value": "5.14%"
     },
     {
       "metric": "like rate",
       "formula": "likes \u00f7 views",
-      "value": "4.18%"
+      "value": "4.34%"
     },
     {
       "metric": "save rate",
       "formula": "saves \u00f7 views",
-      "value": "0.32%"
+      "value": "0.33%"
     },
     {
       "metric": "share rate",
       "formula": "shares \u00f7 views",
-      "value": "0.48%"
+      "value": "0.45%"
     },
     {
       "metric": "comment rate",
       "formula": "comments \u00f7 views",
-      "value": "0.028%"
+      "value": "0.029%"
     },
     {
       "metric": "new followers from reels",
       "formula": "follows attributed to posts",
-      "value": "9.4K"
+      "value": "10.2K"
     },
     {
       "metric": "hit rate",
       "formula": "reels over 100K \u00f7 reels",
-      "value": "15 of 122 (12%)"
+      "value": "16 of 114 (14%)"
     },
     {
       "metric": "reels over 1M",
@@ -72,25 +72,31 @@
     {
       "metric": "posting cadence",
       "formula": "reels \u00f7 days",
-      "value": "122 in 175 days, one every 1.4"
+      "value": "114 in 179 days, one every 1.6"
     },
     {
       "metric": "cpm on a $1,500 reel",
       "formula": "rate \u00f7 avg views \u00d7 1,000",
-      "value": "$13.02"
+      "value": "$10.02"
     },
     {
       "metric": "cost per engagement",
       "formula": "rate \u00f7 avg engagements per reel",
-      "value": "$0.26"
+      "value": "$0.19"
     }
   ],
   "top": [
     {
-      "views": "5.9M",
+      "views": "6.3M",
       "permalink": "https://www.instagram.com/reel/DdNGFD3pv4g/",
       "caption": "Finding out who true friends are \ud83d\ude33\ud83d\udc80",
       "date": "2026-09-12"
+    },
+    {
+      "views": "3M",
+      "permalink": "https://www.instagram.com/reel/Deflf2OpPTC/",
+      "caption": "Ending veganism one steak at a time \ud83e\udd69",
+      "date": "2026-10-14"
     },
     {
       "views": "1.6M",
@@ -99,39 +105,33 @@
       "date": "2026-07-27"
     },
     {
-      "views": "1.5M",
-      "permalink": "https://www.instagram.com/reel/Deflf2OpPTC/",
-      "caption": "Ending veganism one steak at a time \ud83e\udd69",
-      "date": "2026-10-14"
-    },
-    {
-      "views": "643K",
+      "views": "751.9K",
       "permalink": "https://www.instagram.com/reel/DeR0SS0OEdw/",
       "caption": "Same goes for the guys! Comment your red flags for us to review\ud83d\udea9\ud83d\udea9\ud83d\udea9",
       "date": "2026-10-09"
     },
     {
-      "views": "517.7K",
+      "views": "542.4K",
+      "permalink": "https://www.instagram.com/reel/DfH2pNnxPUb/",
+      "caption": "These influencers man\u2026",
+      "date": "2026-10-30"
+    },
+    {
+      "views": "518.3K",
       "permalink": "https://www.instagram.com/reel/DZYIyvoJAP7/",
       "caption": "I can\u2019t believe he said that \ud83d\ude33",
       "date": "2026-06-09"
-    },
-    {
-      "views": "438.2K",
-      "permalink": "https://www.instagram.com/reel/DYMvzigOHP8/",
-      "caption": "follow for more white belt techniques \ud83d\udd25",
-      "date": "2026-05-11"
     }
   ],
   "totals": {
-    "reels": 122,
-    "views": 14056902.0,
-    "reach": 9587021.0,
-    "engagements": 704697.0,
-    "likes": 587795.0,
-    "comments": 3927.0,
-    "saves": 45463.0,
-    "shares": 67512.0,
-    "follows": 9435.0
+    "reels": 114,
+    "views": 17067225.0,
+    "reach": 11726817.0,
+    "engagements": 876933.0,
+    "likes": 740529.0,
+    "comments": 4876.0,
+    "saves": 55508.0,
+    "shares": 76020.0,
+    "follows": 10198.0
   }
 }
